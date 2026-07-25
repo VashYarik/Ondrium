@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ondrium: You feel it. We find it.</title>
+<meta name="description" content="Ondrium finds where AI fits your workflow, proves it's worth building, then builds a custom tool shaped around how your business runs. You own it for good.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0906;
+    --bg-alt: #0e0c09;
+    --bg-card: #141209;
+    --border: rgba(255,255,255,0.08);
+    --text: #f2f0ec;
+    --text-muted: #9c9890;
+    --text-dim: #6f6c66;
+    --accent: #c9a35f;
+    --accent-hover: #d9b878;
+    --accent-dark: #1c1712;
+    --radius: 10px;
+    --max: 1100px;
+    --max-narrow: 680px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Whole-site background system: static glow blobs + grain + running trace
+     lines. Fixed to the viewport so it reads as one surface behind every
+     section, not a per-section fill. Pure CSS/SVG, no image assets. The
+     trace lines are the only motion running on their own; everything else
+     stays static. */
+  .bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 1100px 720px at 20% -12%, rgba(201,163,95,0.11), transparent 62%),
+      radial-gradient(ellipse 760px 560px at 100% 22%, rgba(201,163,95,0.06), transparent 65%),
+      radial-gradient(ellipse 650px 500px at 0% 55%, rgba(201,163,95,0.045), transparent 62%),
+      radial-gradient(ellipse 820px 560px at 92% 88%, rgba(201,163,95,0.05), transparent 65%),
+      linear-gradient(180deg, #100e09 0%, #0a0906 60%);
+    background-repeat: no-repeat;
+  }
+  .bg-layer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Divider glow: a thin light trace runs along the border between each
+     major section, in place of the section's normal static divider line.
+     Motion is locked to real page anatomy (the block breaks) instead of
+     floating loose in the background. */
+  .hero, .problem, .who, .proof, .how, .engagements, .industries, .final-cta {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after, .problem::after, .who::after, .proof::after,
+  .how::after, .engagements::after, .industries::after, .final-cta::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 22%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,163,95,0.85), transparent);
+    animation-name: divider-run;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6.5s;
+    pointer-events: none;
+  }
+  .problem::after { animation-delay: 1s; }
+  .who::after { animation-delay: 2.4s; }
+  .proof::after { animation-delay: 0.4s; }
+  .how::after { animation-delay: 3.2s; }
+  .engagements::after { animation-delay: 1.8s; }
+  .industries::after { animation-delay: 4s; }
+  .final-cta::after { animation-delay: 2.6s; }
+  @keyframes divider-run {
+    0% { transform: translateX(-120%); opacity: 0; }
+    12% { opacity: 1; }
+    88% { opacity: 1; }
+    100% { transform: translateX(550%); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero::after, .problem::after, .who::after, .proof::after,
+    .how::after, .engagements::after, .industries::after, .final-cta::after {
+      animation: none;
+      display: none;
+    }
+    .eye-pupil, .eye-shade, .eye-lid { animation: none; }
+    .eye-lid { transform: scaleY(0); }
+  }
+
+  .eye-pupil {
+    animation: eye-look 8.6s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .eye-glow {
+    opacity: 1;
+  }
+  .eye-shade {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: eye-shade-anim 8.6s ease-in-out infinite;
+  }
+  .eye-iris {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .eye-lid {
+    transform-box: fill-box;
+    transform-origin: top;
+    transform: scaleY(0);
+    animation: eye-lid-anim 8.6s ease-in-out infinite;
+  }
+  @keyframes eye-lid-anim {
+    0%, 50% { transform: scaleY(0); }
+    55% { transform: scaleY(1); }
+    60% { transform: scaleY(0); }
+    100% { transform: scaleY(0); }
+  }
+  @keyframes eye-shade-anim {
+    0%, 8% { filter: brightness(1) drop-shadow(0 0 0 rgba(0,0,0,0)); }
+    14% { filter: brightness(0.74) drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
+    28% { filter: brightness(1.1) drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
+    42% { filter: brightness(0.74) drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
+    48%, 60% { filter: brightness(1) drop-shadow(0 1px 2px rgba(0,0,0,0.35)); }
+    66%, 100% { filter: brightness(1) drop-shadow(0 0 0 rgba(0,0,0,0)); }
+  }
+  @keyframes eye-look {
+    0%, 100% { transform: translate(0, 0); }
+    14% { transform: translate(0, 7px); }
+    28% { transform: translate(7px, 0); }
+    42% { transform: translate(0, 7px); }
+    48% { transform: translate(0, 0); }
+  }
+
+  h1, h2, h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 0.5em;
+    color: var(--text);
+  }
+
+  p { margin: 0 0 1em; color: var(--text-muted); }
+  a { color: inherit; text-decoration: none; }
+
+  .section-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+  }
+  .section-inner.narrow { max-width: var(--max-narrow); }
+  .center { text-align: center; }
+
+  /* Header */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10,9,6,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-lockup {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .logo-icon {
+    display: block;
+    height: 28px;
+    width: auto;
+  }
+  .logo-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+    color: var(--text);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    border-radius: 999px;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--text);
+    padding: 0.85rem 1.7rem;
+    font-size: 0.95rem;
+  }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-primary:active { transform: scale(0.98); }
+  .btn-sm { padding: 0.55rem 1.15rem; font-size: 0.85rem; }
+  .btn-lg { padding: 1rem 2.1rem; font-size: 1.05rem; }
+
+  /* Hero */
+  .hero {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+    margin-bottom: 0.6em;
+  }
+  .hero .subline {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto 2.2rem;
+  }
+
+  /* Problem */
+  .problem { border-bottom: 1px solid var(--border); }
+  .problem p { font-size: 1.1rem; color: var(--text-muted); }
+  .problem p:last-child { color: var(--text); }
+
+  /* Who we are */
+  .who { background: var(--bg-alt); border-bottom: 1px solid var(--border); }
+  .who p { font-size: 1.05rem; }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 1.75rem 0;
+  }
+  .team-member {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+  }
+  .team-member .team-name { font-family: 'DM Serif Display', serif; font-size: 1.1rem; margin: 0; }
+  .team-member .team-role {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin: 0.35rem 0 0.6rem;
+  }
+  .team-member .team-desc { font-size: 0.92rem; color: var(--text-muted); margin: 0; }
+  @media (max-width: 700px) {
+    .team-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Trust bar */
+  .trust-bar {
+    background: var(--bg-alt);
+    padding: 1.5rem 1.5rem;
+    text-align: center;
+  }
+  .trust-bar p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-dim);
+  }
+
+  /* Proof */
+  .proof { border-bottom: 1px solid var(--border); }
+  .proof h2 { margin-bottom: 2.2rem; }
+  .proof-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .proof-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 2px solid rgba(201,163,95,0.5);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .proof-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(201,163,95,0.12);
+  }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4.5rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+  }
+  .proof-status {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border: 1px solid rgba(201,163,95,0.35);
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .proof-card h3 { font-size: 1.4rem; margin-bottom: 1.1rem; }
+  .proof-card dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    margin-top: 1rem;
+  }
+  .proof-card dt:first-child { margin-top: 0; }
+  .proof-card dd {
+    margin: 0.3rem 0 0;
+    color: var(--text);
+    font-size: 0.98rem;
+  }
+  .mid-cta {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+  .mid-cta p { margin: 0; color: var(--text); max-width: 460px; }
+
+  /* How it works */
+  .how { background: var(--bg-alt); border-bottom: 1px solid var(--border); }
+  .section-lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0.75rem 0 0;
+  }
+  .section-lead::first-line { color: var(--text); }
+  .how-capper {
+    margin-top: 2.25rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    line-height: 1.4;
+    color: var(--accent);
+  }
+  .steps {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+  }
+  .steps li { display: flex; gap: 1.25rem; align-items: flex-start; }
+  .step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 2.5rem;
+  }
+  .steps h3 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+  .steps p { margin: 0; }
+
+  /* Engagements */
+  .engagements { border-bottom: 1px solid var(--border); }
+  .engagement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.2rem;
+  }
+  .engagement-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.85rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .engagement-card.featured {
+    border: 1px solid rgba(201,163,95,0.5);
+    background: rgba(201,163,95,0.04);
+  }
+  .engagement-badge {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    background: var(--accent);
+    color: var(--text);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+  }
+  .engagement-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+  .engagement-card .price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+  }
+  .engagement-card p:last-child { font-size: 0.95rem; }
+
+  /* Industries */
+  .industries { background: var(--bg-alt); border-bottom: 1px solid var(--border); }
+  .industry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .industry-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    transition: border-color 0.15s ease;
+  }
+  .industry-card:hover { border-color: rgba(201,163,95,0.3); }
+  .industry-card:last-child { grid-column: 1 / -1; }
+  .industry-name {
+    margin: 0 0 0.35rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .industry-desc {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  /* Final CTA */
+  .final-cta {
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(circle at center, rgba(201,163,95,0.03), transparent 70%);
+  }
+  .final-cta h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+  .final-cta > .section-inner > p { font-size: 1.1rem; max-width: 480px; margin: 0 auto 2rem; }
+  .contact-direct {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 1.05rem;
+  }
+  .contact-direct a { color: var(--text-muted); border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+  .contact-direct a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* Footer */
+  .site-footer { padding: 3rem 1.5rem; }
+  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 1.15rem; margin-bottom: 0.75rem; }
+  .site-footer p { font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .site-footer .copyright { color: var(--text-dim); margin-top: 1rem; }
+  .site-footer a:hover { color: var(--accent); }
+
+  @media (max-width: 760px) {
+    .section-inner { padding: 3.5rem 1.25rem; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .engagement-grid { grid-template-columns: 1fr; }
+    .industry-grid { grid-template-columns: 1fr; }
+    .mid-cta { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-layer" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-lockup"><svg class="logo-icon" viewBox="0 0 60 60" width="28" height="28" aria-hidden="true">
+      <defs>
+        <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.55"/>
+          <stop offset="60%" stop-color="var(--accent)" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="irisSocket" cx="38%" cy="32%" r="72%">
+          <stop offset="0%" stop-color="#2a2318"/>
+          <stop offset="70%" stop-color="#100c07"/>
+          <stop offset="100%" stop-color="#000000"/>
+        </radialGradient>
+        <clipPath id="innerClip">
+          <circle cx="33" cy="34" r="11.2"/>
+        </clipPath>
+        <clipPath id="ballClip">
+          <circle cx="30" cy="30" r="28.25"/>
+        </clipPath>
+      </defs>
+      <circle class="eye-glow" cx="30" cy="30" r="28.25" fill="url(#eyeGlow)" clip-path="url(#ballClip)"/>
+      <g class="eye-shade">
+        <circle cx="30" cy="30" r="26" fill="none" stroke="var(--text)" stroke-width="4.5"/>
+        <g class="eye-pupil">
+          <circle cx="33" cy="34" r="11.2" fill="#080604"/>
+          <circle cx="33" cy="34" r="13" fill="none" stroke="var(--text)" stroke-width="4"/>
+          <circle class="eye-iris" cx="33" cy="34" r="9" fill="url(#irisSocket)"/>
+          <circle cx="33" cy="34" r="4" fill="var(--accent)"/>
+          <circle class="eye-spec" cx="30" cy="31" r="1.6" fill="#ffffff" opacity="0.85"/>
+          <rect class="eye-lid" x="21.8" y="22.8" width="22.4" height="22.4" fill="var(--text)" clip-path="url(#innerClip)"/>
+        </g>
+      </g>
+    </svg><span class="logo-text">ONDRIUM</span></div>
+    <a href="mailto:vladvashchuk2005@gmail.com?subject=Let%27s%20find%20my%20gap" class="btn btn-primary btn-sm">Book a call</a>
+  </div>
+</header>
+
+<!-- SECTION 1 — HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <h1>You feel it.<br>We find it.</h1>
+    <p class="subline">We find where AI wins you real time and money, then hand you a tool built for your business. Fixed scope, and yours to keep.</p>
+    <a href="mailto:vladvashchuk2005@gmail.com?subject=Let%27s%20find%20my%20gap" class="btn btn-primary btn-lg">Let's find your gap</a>
+  </div>
+</section>
+
+<!-- SECTION 2 — THE PROBLEM -->
+<section class="problem" id="problem">
+  <div class="section-inner narrow">
+    <p>Your best people spend their days on work they were never hired to do. Recruiters scan resumes by hand for a role that closed last week. The floor manager walks the warehouse to see what's ready to ship. Someone rekeys the same numbers into a third spreadsheet.</p>
+    <p>Every one of those hours is an hour off the work that actually grows the business. Your team feels it first: the grind, the double-checking, the sense that the tools are working against them.</p>
+    <p>You built something real. The version running today wears your people down more than it needs to.</p>
+  </div>
+</section>
+
+<!-- SECTION 3 — WHO WE ARE -->
+<section class="who" id="who-we-are">
+  <div class="section-inner narrow">
+    <h2>Who we are</h2>
+    <p class="section-lead">Three people, one custom build. We find your exact problem, design a tool around it, and hand you something made for your business alone.</p>
+    <div class="team-grid">
+      <div class="team-member">
+        <p class="team-name">Vlad</p>
+        <p class="team-role">Finds the problem</p>
+        <p class="team-desc">Gets inside your operation, finds the exact bottleneck, and designs the AI solution that removes it.</p>
+      </div>
+      <div class="team-member">
+        <p class="team-name">Anna</p>
+        <p class="team-role">Designs it</p>
+        <p class="team-desc">Shapes a personalized tool around the way your team already works, so they actually reach for it. Approved by you before any build starts.</p>
+      </div>
+      <div class="team-member">
+        <p class="team-name">Yarik</p>
+        <p class="team-role">Builds it</p>
+        <p class="team-desc">Turns the design into a real, working tool running on your data.</p>
+      </div>
+    </div>
+    <p>The pattern holds every time: embed, find what's broken, design the fix around the people who use it, build it, prove it with a number. HireView came out of hands-on recruiting work at Brillio. FlowOps came out of the warehouse floor at Quinn's Auction Galleries, a six-week build covering six role types, QR rack tracking, and a live floor map.</p>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="section-inner narrow" style="padding-top:0;padding-bottom:0;">
+    <p>Brillio &middot; 200+ candidates screened &middot; 56-recruiter global pilot &middot; 94-commit production build</p>
+  </div>
+</section>
+
+<!-- SECTION 4 — PROOF -->
+<section class="proof" id="proof">
+  <div class="section-inner">
+    <h2>Proof</h2>
+    <div class="proof-grid">
+
+      <div class="proof-card">
+        <span class="proof-status">Active in production</span>
+        <h3>HireView at Brillio</h3>
+        <div class="proof-stat">
+          <div class="stat-num">60%</div>
+          <div class="stat-label">REVIEW THROUGHPUT IMPROVEMENT</div>
+        </div>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Manual resume review consumed recruiter time with no way to catch duplicate submissions.</dd>
+          <dt>Solution</dt>
+          <dd>A recruiting intelligence platform that screens resumes and flags duplicates automatically.</dd>
+          <dt>Result</dt>
+          <dd>60% improvement in review throughput. 200+ candidates screened. 56-recruiter global pilot approved across five countries. Fraud prevention suite catching duplicate submissions. Featured in an executive recruiting report to the Director of Talent Acquisition.</dd>
+        </dl>
+      </div>
+
+      <div class="proof-card">
+        <span class="proof-status">Built and deployment-ready</span>
+        <h3>FlowOps at Quinn's Auction Galleries</h3>
+        <div class="proof-stat">
+          <div class="stat-num">94</div>
+          <div class="stat-label">COMMITS IN SIX WEEKS</div>
+        </div>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Warehouse coordination ran on verbal relay and floor-walks, with no visibility into rack status or workflow stage.</dd>
+          <dt>Solution</dt>
+          <dd>A purpose-built operations platform covering six role types, from floor staff to auction leads.</dd>
+          <dt>Result</dt>
+          <dd>Full workflow visibility. QR-based rack tracking. Real-time floor map. Built in six weeks across 94 commits.</dd>
+        </dl>
+      </div>
+
+    </div>
+
+    <div class="mid-cta">
+      <p>Both started the same way: a five-day sprint that mapped the gap before we touched any code.</p>
+      <a href="mailto:vladvashchuk2005@gmail.com?subject=Let%27s%20find%20my%20gap" class="btn btn-primary">Book a call</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — HOW IT WORKS -->
+<section class="how" id="how-it-works">
+  <div class="section-inner narrow">
+    <h2>How it works</h2>
+    <p class="section-lead">We do the job before we fix the job. We work inside your operation first, so the fix is built on what actually happens on the floor.</p>
+    <ol class="steps">
+      <li>
+        <span class="step-num">01</span>
+        <div>
+          <h3>We find it</h3>
+          <p>We embed inside your operation and find exactly where the money goes. You see the number it's costing you before we propose a thing.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">02</span>
+        <div>
+          <h3>We build it</h3>
+          <p>We design and build the tool that closes the gap. Fixed scope. Fixed fee. No surprises.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">03</span>
+        <div>
+          <h3>You own it</h3>
+          <p>You get a validated before-and-after number, a real dollar figure a stakeholder will vouch for, and a tool that keeps working. It tracks your data too, so the next improvement is easier to find. Yours permanently. No subscription, no lock-in.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="how-capper">Every engagement ends the same way: a dollar figure a stakeholder will vouch for.</p>
+  </div>
+</section>
+
+<!-- SECTION 6 — THE ENGAGEMENTS -->
+<section class="engagements" id="engagements">
+  <div class="section-inner">
+    <h2>The engagements</h2>
+    <div class="engagement-grid">
+
+      <div class="engagement-card">
+        <h3>Diagnostic Sprint</h3>
+        <p class="price">$2,500</p>
+        <p>Five days. We embed, map the workflow, and hand you a one-page problem statement: current-state metrics, recommended fix, and projected return. The right starting point for every engagement.</p>
+      </div>
+
+      <div class="engagement-card featured">
+        <span class="engagement-badge">Recommended</span>
+        <h3>Operations Sprint</h3>
+        <p class="price">$8,000–$15,000</p>
+        <p>Thirty days. We build the fix. Fixed fee, fixed scope. Written guarantee: if it doesn't work, we keep working until it does.</p>
+      </div>
+
+      <div class="engagement-card">
+        <h3>Operations Retainer</h3>
+        <p class="price">$3,000–$8,000/mo</p>
+        <p>Ongoing AI operations leadership, without the cost of a full-time hire. Available only after a completed Operations Sprint.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — THE INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="section-inner narrow">
+    <h2>Who this is for</h2>
+    <p class="section-lead">Built for 50 to 500 person operations with a dedicated ops or HR team and workflows that still run by hand.</p>
+    <div class="industry-grid">
+      <div class="industry-card">
+        <p class="industry-name">Recruiting &amp; HR Operations</p>
+        <p class="industry-desc">screening, sourcing, and fraud checks that eat a recruiter's week. we built HireView for exactly this.</p>
+      </div>
+      <div class="industry-card">
+        <p class="industry-name">Auction &amp; Estate Operations</p>
+        <p class="industry-desc">inventory and workflow visibility across a floor no one can see from a desk. FlowOps put the whole warehouse on a live map.</p>
+      </div>
+      <div class="industry-card">
+        <p class="industry-name">Legal Operations</p>
+        <p class="industry-desc">document review and case intake buried in manual tracking. picture intake that sorts and routes every new matter on its own.</p>
+      </div>
+      <div class="industry-card">
+        <p class="industry-name">Healthcare Administration</p>
+        <p class="industry-desc">scheduling and records work that pulls staff away from patients. picture a scheduler that clears the backlog overnight.</p>
+      </div>
+      <div class="industry-card">
+        <p class="industry-name">Professional Services</p>
+        <p class="industry-desc">client intake and project handoffs that hang on one person remembering everything. picture a handoff that never drops a step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 — CTA -->
+<section class="final-cta" id="cta">
+  <div class="section-inner narrow center">
+    <h2>Let's find your gap.</h2>
+    <p>Thirty minutes, no pitch. You'll leave with a clear read on where AI can pay off in your workflow, and an honest answer on whether we're the ones to build it. If we're not, we'll point you to who is.</p>
+    <a href="mailto:vladvashchuk2005@gmail.com?subject=Let%27s%20find%20my%20gap" class="btn btn-primary btn-lg">Book a call</a>
+    <div class="contact-direct">
+      <a href="mailto:vladvashchuk2005@gmail.com">vladvashchuk2005@gmail.com</a>
+      <a href="https://linkedin.com/in/vladyslav-vashchuk-3b7657355" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="tel:+15715441665">571-544-1665</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9 — FOOTER -->
+<footer class="site-footer">
+  <div class="section-inner narrow center">
+    <p class="footer-logo">Ondrium</p>
+    <p>
+      <a href="mailto:vladvashchuk2005@gmail.com">vladvashchuk2005@gmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="tel:+15715441665">571-544-1665</a>
+    </p>
+    <p>Fairfax, Virginia · Remote engagements available</p>
+    <p class="copyright">© 2026 Ondrium</p>
+  </div>
+</footer>
+
+</body>
+</html>
