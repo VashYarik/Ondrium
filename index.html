@@ -270,8 +270,15 @@
   .team-member {
     background: var(--bg-card);
     border: 1px solid var(--border);
+    border-left: 2px solid rgba(201,163,95,0.45);
     border-radius: var(--radius);
     padding: 1.25rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-left-color 0.15s ease;
+  }
+  .team-member:hover {
+    transform: translateY(-3px);
+    border-left-color: var(--accent);
+    box-shadow: 0 6px 20px rgba(201,163,95,0.10);
   }
   .team-member .team-name { font-family: 'DM Serif Display', serif; font-size: 1.1rem; margin: 0; }
   .team-member .team-role {
