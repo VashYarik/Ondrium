@@ -1,0 +1,10 @@
+{
+  "routes": [
+    {
+      "route": "/preview/*",
+      "headers": {
+        "X-Robots-Tag": "noindex, nofollow"
+      }
+    }
+  ]
+}

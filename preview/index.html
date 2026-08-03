@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Previews — Ondrium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0906;
+    --bg-card: #141209;
+    --border: rgba(255,255,255,0.08);
+    --text: #f2f0ec;
+    --text-muted: #9c9890;
+    --text-dim: #6f6c66;
+    --accent: #c9a35f;
+    --accent-hover: #d9b878;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 72px 24px;
+    background:
+      radial-gradient(ellipse 1100px 720px at 20% -12%, rgba(201,163,95,0.11), transparent 62%),
+      linear-gradient(180deg, #100e09 0%, #0a0906 60%);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 680px; margin: 0 auto; }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(201,163,95,0.35);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+  }
+
+  .lede { color: var(--text-muted); margin: 0 0 40px; }
+
+  ul { list-style: none; padding: 0; margin: 0; }
+
+  li + li { margin-top: 12px; }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+
+  .item:hover {
+    border-color: rgba(201,163,95,0.45);
+    transform: translateY(-1px);
+  }
+
+  .slug {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 15px;
+    color: var(--accent);
+  }
+
+  .item:hover .slug { color: var(--accent-hover); }
+
+  .status {
+    font-size: 12px;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .note {
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 2px 6px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="tag">Internal</span>
+    <h1>Previews</h1>
+    <p class="lede">
+      Standalone landing pages, served outside the main site so each one
+      renders exactly as it will ship.
+    </p>
+
+    <ul>
+      <li>
+        <a class="item" href="next2next/">
+          <span class="slug">/preview/next2next</span>
+          <span class="status">Live &middot; 3.6 MB &middot; needs JS</span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="note">
+      To add one: drop a full HTML document at
+      <code>preview/&lt;slug&gt;/index.html</code> and add a row here.
+      See <code>preview/README.md</code>.
+    </p>
+  </div>
+</body>
+</html>
