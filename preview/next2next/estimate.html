@@ -22,10 +22,10 @@
 
 <div class="customer-shell">
   <header class="customer-header">
-    <div class="customer-header__mark">N2</div>
+    <div class="brand-mark">N2</div>
     <div>
       <div class="customer-header__word">next2next</div>
-      <div class="customer-header__sub">Instant photo estimate</div>
+      <div class="customer-header__sub text-small text-muted">Instant photo estimate</div>
     </div>
   </header>
 
@@ -40,7 +40,7 @@
           </svg>
         </div>
         <div class="upload-zone__title">Take or upload a photo</div>
-        <div class="upload-zone__hint">Any room you'd like moved &mdash; we'll take it from there</div>
+        <div class="upload-zone__hint text-small">Any room you'd like moved &mdash; we'll take it from there</div>
       </label>
       <input type="file" id="file-input" accept="image/*" capture="environment">
     </div>
@@ -60,16 +60,16 @@
       <div id="result-block" class="hidden">
         <div class="result-grid">
           <div class="result-tile">
-            <div class="result-tile__label">Recommended crew</div>
+            <div class="text-caption result-tile__label">Recommended crew</div>
             <div class="result-tile__value">3 movers</div>
           </div>
           <div class="result-tile">
-            <div class="result-tile__label">Estimated time</div>
+            <div class="text-caption result-tile__label">Estimated time</div>
             <div class="result-tile__value">2.5&ndash;3.5 hrs</div>
           </div>
         </div>
-        <div style="text-align:center; margin-top:16px;">
-          <a href="#" id="reset-link" style="font-size:12px; color:#8b7d7b; text-decoration:underline;">Analyze another photo</a>
+        <div class="estimate-footer">
+          <button type="button" class="link-muted" id="reset-link">Analyze another photo</button>
         </div>
       </div>
     </div>
