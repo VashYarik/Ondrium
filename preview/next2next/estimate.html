@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AI photo estimate — next2next</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="meta-nav" aria-label="Preview navigation">
+  <span class="meta-nav__label">Preview</span>
+  <a href="index.html">Landing</a>
+  <span class="meta-nav__sep">/</span>
+  <a href="tracking.html">Tracking</a>
+  <span class="meta-nav__sep">/</span>
+  <a href="estimate.html" aria-current="page">Estimate</a>
+  <span class="meta-nav__sep">/</span>
+  <a href="dashboard.html">Dashboard</a>
+</nav>
+
+<div class="customer-shell">
+  <header class="customer-header">
+    <div class="customer-header__mark">N2</div>
+    <div>
+      <div class="customer-header__word">next2next</div>
+      <div class="customer-header__sub">Instant photo estimate</div>
+    </div>
+  </header>
+
+  <main class="customer-main">
+
+    <div id="upload-stage">
+      <label class="upload-zone" for="file-input" id="upload-zone">
+        <div class="upload-zone__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 16V4M12 4L7 9M12 4l5 5" stroke="#5c2731" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="#5c2731" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="upload-zone__title">Take or upload a photo</div>
+        <div class="upload-zone__hint">Any room you'd like moved &mdash; we'll take it from there</div>
+      </label>
+      <input type="file" id="file-input" accept="image/*" capture="environment">
+    </div>
+
+    <div id="analysis-stage" class="hidden">
+      <div class="preview-frame">
+        <img id="preview-img" alt="Uploaded room photo">
+        <div class="scan-overlay" id="scan-overlay">
+          <div class="scan-line"></div>
+          <div class="scan-status">
+            <span class="scan-status__dot"></span>
+            <span id="scan-status-text">Detecting furniture&hellip;</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="result-block" class="hidden">
+        <div class="result-grid">
+          <div class="result-tile">
+            <div class="result-tile__label">Recommended crew</div>
+            <div class="result-tile__value">3 movers</div>
+          </div>
+          <div class="result-tile">
+            <div class="result-tile__label">Estimated time</div>
+            <div class="result-tile__value">2.5&ndash;3.5 hrs</div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:16px;">
+          <a href="#" id="reset-link" style="font-size:12px; color:#8b7d7b; text-decoration:underline;">Analyze another photo</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
