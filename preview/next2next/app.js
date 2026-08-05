@@ -12,8 +12,67 @@
   var scanStatusText = document.getElementById('scan-status-text');
   var resultBlock = document.getElementById('result-block');
   var resetLink = document.getElementById('reset-link');
+  var itemCheckboxes = Array.prototype.slice.call(document.querySelectorAll('#item-list input[type="checkbox"]'));
+  var itemCountSub = document.getElementById('item-count-sub');
+  var crewSelector = document.getElementById('crew-selector');
+  var crewButtons = crewSelector ? Array.prototype.slice.call(crewSelector.querySelectorAll('.crew-btn')) : [];
+  var totalTimeValue = document.getElementById('total-time-value');
+  var totalTimeSub = document.getElementById('total-time-sub');
 
   var statusPhrases = ['Detecting furniture…', 'Estimating volume…', 'Calculating crew size…'];
+
+  // Diminishing returns: more crew is faster, but not linearly -- coordination
+  // overhead and tasks that already need 2+ people mean a 6-person crew isn't
+  // 3x a 2-person crew.
+  var crewEfficiency = { 2: 1.7, 3: 2.3, 4: 2.8, 5: 3.2, 6: 3.5 };
+  var activeCrew = 3;
+
+  function formatMinutes(total) {
+    var hrs = Math.floor(total / 60);
+    var mins = Math.round(total % 60);
+    if (hrs === 0) return mins + 'm';
+    if (mins === 0) return hrs + 'h';
+    return hrs + 'h ' + mins + 'm';
+  }
+
+  function updateEstimate() {
+    var checkedMinutes = 0;
+    var checkedCount = 0;
+
+    itemCheckboxes.forEach(function (box) {
+      var row = box.closest('.item-row');
+      row.classList.toggle('is-unchecked', !box.checked);
+      if (box.checked) {
+        checkedMinutes += Number(box.dataset.minutes);
+        checkedCount++;
+      }
+    });
+
+    if (itemCountSub) itemCountSub.textContent = '(' + checkedCount + ' of ' + itemCheckboxes.length + ' selected)';
+
+    if (checkedMinutes === 0) {
+      totalTimeValue.textContent = '—';
+      totalTimeSub.textContent = 'Select at least one item';
+      return;
+    }
+
+    var totalMinutes = checkedMinutes / crewEfficiency[activeCrew];
+    totalTimeValue.textContent = formatMinutes(totalMinutes);
+    totalTimeSub.textContent = checkedCount + ' item' + (checkedCount === 1 ? '' : 's') + ' selected · ' + activeCrew + ' crew';
+  }
+
+  itemCheckboxes.forEach(function (box) {
+    box.addEventListener('change', updateEstimate);
+  });
+
+  crewButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activeCrew = Number(btn.dataset.crew);
+      crewButtons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+      updateEstimate();
+    });
+    if (Number(btn.dataset.crew) === activeCrew) btn.classList.add('is-active');
+  });
 
   fileInput.addEventListener('change', function (e) {
     var file = e.target.files && e.target.files[0];
@@ -44,6 +103,7 @@
       clearInterval(phraseTimer);
       scanOverlay.classList.add('hidden');
       resultBlock.classList.remove('hidden');
+      updateEstimate();
     }, 1200);
   }
 
@@ -52,6 +112,11 @@
     fileInput.value = '';
     analysisStage.classList.add('hidden');
     uploadStage.classList.remove('hidden');
+
+    // reset the checklist/crew back to defaults for the next photo
+    itemCheckboxes.forEach(function (box) { box.checked = true; });
+    activeCrew = 3;
+    crewButtons.forEach(function (b) { b.classList.toggle('is-active', Number(b.dataset.crew) === 3); });
   });
 })();
 

@@ -58,15 +58,127 @@
       </div>
 
       <div id="result-block" class="hidden">
-        <div class="result-grid">
-          <div class="result-tile">
-            <div class="text-caption result-tile__label">Recommended crew</div>
-            <div class="result-tile__value">3 movers</div>
+        <div class="estimate-results">
+
+          <div class="card">
+            <div class="text-h2 estimate-section-title">Items to pack <span class="text-small text-muted" id="item-count-sub"></span></div>
+            <ul class="item-list" id="item-list">
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="55">
+                  <span class="item-row__name">Sectional sofa <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--hard" title="Difficulty: hard"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">55 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="25">
+                  <span class="item-row__name">Dining table <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--medium" title="Difficulty: medium"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">25 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="16">
+                  <span class="item-row__name">Dining chairs <span class="item-row__qty">&times;4</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">16 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="22">
+                  <span class="item-row__name">Wall-mounted TV (55&Prime;+) <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--medium" title="Difficulty: medium"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">22 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="10">
+                  <span class="item-row__name">Rocking chair <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">10 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="15">
+                  <span class="item-row__name">Storage trunk / coffee table <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--medium" title="Difficulty: medium"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">15 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="14">
+                  <span class="item-row__name">Area rugs <span class="item-row__qty">&times;2</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">14 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="8">
+                  <span class="item-row__name">Framed artwork <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">8 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="6">
+                  <span class="item-row__name">Table lamp <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">6 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="12">
+                  <span class="item-row__name">Wicker storage baskets <span class="item-row__qty">&times;3</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">12 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="9">
+                  <span class="item-row__name">Side table <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">9 min</span>
+              </li>
+              <li class="item-row">
+                <label class="item-row__check">
+                  <input type="checkbox" checked data-minutes="15">
+                  <span class="item-row__name">Boxed d&eacute;cor &amp; small items <span class="item-row__qty">&times;1</span></span>
+                </label>
+                <span class="difficulty difficulty--easy" title="Difficulty: easy"><span class="difficulty__dot"></span><span class="difficulty__dot"></span><span class="difficulty__dot"></span></span>
+                <span class="item-row__time tabular-nums">15 min</span>
+              </li>
+            </ul>
           </div>
-          <div class="result-tile">
-            <div class="text-caption result-tile__label">Estimated time</div>
-            <div class="result-tile__value">2.5&ndash;3.5 hrs</div>
+
+          <div class="card">
+            <div class="text-caption estimate-section-title">Crew size</div>
+            <div class="crew-selector" id="crew-selector">
+              <button type="button" class="crew-btn" data-crew="2">2</button>
+              <button type="button" class="crew-btn" data-crew="3">3<span class="crew-btn__badge">Best</span></button>
+              <button type="button" class="crew-btn" data-crew="4">4</button>
+              <button type="button" class="crew-btn" data-crew="5">5</button>
+              <button type="button" class="crew-btn" data-crew="6">6</button>
+            </div>
           </div>
+
+          <div class="eta-card">
+            <div class="text-caption eta-card__label">Estimated pack &amp; load time</div>
+            <div class="estimate-total__value" id="total-time-value">&mdash;</div>
+            <div class="text-small eta-card__sub" id="total-time-sub"></div>
+          </div>
+
         </div>
         <div class="estimate-footer">
           <button type="button" class="link-muted" id="reset-link">Analyze another photo</button>
