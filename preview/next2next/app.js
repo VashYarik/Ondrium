@@ -120,9 +120,9 @@
   });
 })();
 
-(function dashboard() {
+(function sidebarShell() {
   var appShell = document.getElementById('app-shell');
-  if (!appShell) return; // only present on dashboard.html
+  if (!appShell) return; // present on tracking/estimate/dashboard, all share this shell
 
   // --- mobile sidebar (off-canvas) ---
   var menuBtn = document.getElementById('menu-btn');
@@ -138,10 +138,14 @@
   document.querySelectorAll('.sidebar__link[data-inert]').forEach(function (link) {
     link.addEventListener('click', function (e) { e.preventDefault(); closeSidebar(); });
   });
+})();
+
+(function dashboardJobs() {
+  var jobsBody = document.getElementById('jobs-body');
+  if (!jobsBody) return; // only present on dashboard.html
 
   // --- loading skeleton (table + KPI cards) ---
   var skeletonRows = document.getElementById('jobs-skeleton');
-  var jobsBody = document.getElementById('jobs-body');
   var kpiCards = document.querySelectorAll('[data-kpi]');
   var refreshBtn = document.getElementById('refresh-btn');
   var isLoading = true;

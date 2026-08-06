@@ -172,6 +172,20 @@ input:focus-visible,
 
 .meta-nav__sep { color: var(--text-secondary); }
 
+.preview-notice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--cream-200);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  border-bottom: var(--border-hairline);
+}
+
+.preview-notice svg { flex-shrink: 0; color: var(--text-muted); }
+
 /* ===================== brand mark (shared: sidebar + customer header) ===================== */
 
 .brand-mark {
@@ -340,6 +354,7 @@ input:focus-visible,
 /* ===================== app shell (operator surface: dashboard) ===================== */
 
 .app-shell { display: flex; min-height: 100vh; }
+.app-shell__main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 
 .sidebar {
   width: var(--sidebar-w);
@@ -828,7 +843,7 @@ input:focus-visible,
     position: fixed;
     inset: 0 25% 0 0;
     width: auto;
-    z-index: 101;
+    z-index: 301;
     align-items: stretch;
     transform: translateX(-100%);
     transition: transform 180ms ease;
@@ -842,7 +857,7 @@ input:focus-visible,
   .app-shell.sidebar-open .sidebar { transform: translateX(0); }
   .sidebar__backdrop {
     display: none;
-    position: fixed; inset: 0; background: rgba(28, 20, 21, 0.4); z-index: 100;
+    position: fixed; inset: 0; background: rgba(28, 20, 21, 0.4); z-index: 300;
   }
   .app-shell.sidebar-open .sidebar__backdrop { display: block; }
 
