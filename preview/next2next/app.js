@@ -133,11 +133,6 @@
   if (menuBtn) menuBtn.addEventListener('click', function () { appShell.classList.add('sidebar-open'); });
   if (backdrop) backdrop.addEventListener('click', closeSidebar);
   if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
-
-  // sidebar nav items that don't lead anywhere in this preview shouldn't jump the page
-  document.querySelectorAll('.sidebar__link[data-inert]').forEach(function (link) {
-    link.addEventListener('click', function (e) { e.preventDefault(); closeSidebar(); });
-  });
 })();
 
 (function dashboardJobs() {
@@ -210,5 +205,110 @@
   if (clearBtn) clearBtn.addEventListener('click', function () {
     filterInput.value = '';
     applyFilter();
+  });
+})();
+
+(function jobsPage() {
+  var body = document.getElementById('all-jobs-body');
+  if (!body) return; // only present on jobs.html
+
+  var rows = Array.prototype.slice.call(body.querySelectorAll('tr'));
+  var totalCount = rows.length;
+  var searchInput = document.getElementById('jobs-search');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('#status-chips .chip'));
+  var emptyState = document.getElementById('jobs-empty');
+  var footer = document.getElementById('all-jobs-footer');
+  var clearBtn = document.getElementById('jobs-clear-filters');
+  var activeStatus = 'all';
+
+  function applyFilters() {
+    var query = (searchInput.value || '').trim().toLowerCase();
+    var visible = 0;
+
+    rows.forEach(function (row) {
+      var matchesStatus = activeStatus === 'all' || row.dataset.status === activeStatus;
+      var haystack = (row.dataset.customer + ' ' + row.dataset.route + ' ' + row.dataset.crew).toLowerCase();
+      var matchesQuery = haystack.indexOf(query) !== -1;
+      var match = matchesStatus && matchesQuery;
+      row.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    if (visible === 0) {
+      body.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+    } else {
+      body.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+    }
+
+    footer.textContent = 'Showing ' + visible + ' of ' + totalCount + ' jobs';
+  }
+
+  searchInput.addEventListener('input', applyFilters);
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      activeStatus = chip.dataset.status;
+      chips.forEach(function (c) { c.classList.toggle('is-active', c === chip); });
+      applyFilters();
+    });
+  });
+  clearBtn.addEventListener('click', function () {
+    searchInput.value = '';
+    activeStatus = 'all';
+    chips.forEach(function (c) { c.classList.toggle('is-active', c.dataset.status === 'all'); });
+    applyFilters();
+  });
+})();
+
+(function customersPage() {
+  var body = document.getElementById('customers-body');
+  if (!body) return; // only present on customers.html
+
+  var rows = Array.prototype.slice.call(body.querySelectorAll('tr'));
+  var totalCount = rows.length;
+  var searchInput = document.getElementById('customers-search');
+  var emptyState = document.getElementById('customers-empty');
+  var emptyTitle = document.getElementById('customers-empty-title');
+  var footer = document.getElementById('customers-footer');
+  var clearBtn = document.getElementById('customers-clear-search');
+
+  function applyFilter() {
+    var query = (searchInput.value || '').trim().toLowerCase();
+    var visible = 0;
+
+    rows.forEach(function (row) {
+      var match = row.dataset.name.toLowerCase().indexOf(query) !== -1;
+      row.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    if (visible === 0) {
+      body.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+      emptyTitle.textContent = query ? 'No customers match "' + searchInput.value.trim() + '"' : 'No customers match your search';
+    } else {
+      body.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+    }
+
+    footer.textContent = 'Showing ' + visible + ' of ' + totalCount + ' customers';
+  }
+
+  searchInput.addEventListener('input', applyFilter);
+  clearBtn.addEventListener('click', function () { searchInput.value = ''; applyFilter(); });
+})();
+
+(function settingsPage() {
+  var saveBtn = document.getElementById('settings-save');
+  if (!saveBtn) return; // only present on settings.html
+
+  var saved = document.getElementById('settings-saved');
+  var timer;
+
+  saveBtn.addEventListener('click', function () {
+    saved.classList.add('is-visible');
+    clearTimeout(timer);
+    timer = setTimeout(function () { saved.classList.remove('is-visible'); }, 2000);
   });
 })();

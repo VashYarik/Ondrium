@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Customers — next2next</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="meta-nav" aria-label="Preview navigation">
+  <span class="meta-nav__label">Preview</span>
+  <a href="index.html">Landing</a>
+  <span class="meta-nav__sep">/</span>
+  <a href="tracking.html">Tracking</a>
+  <span class="meta-nav__sep">/</span>
+  <a href="estimate.html">Estimate</a>
+  <span class="meta-nav__sep">/</span>
+  <a href="dashboard.html">Dashboard</a>
+</nav>
+
+<div class="preview-notice">
+  <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v4.5M10 6.8v.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  Preview build &mdash; sample data for demonstration only, not connected to a live system.
+</div>
+
+<div class="app-shell" id="app-shell">
+  <div class="sidebar__backdrop" id="sidebar-backdrop"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <div class="brand-mark">N2</div>
+      <div class="sidebar__wordmark">next2next</div>
+      <button class="btn btn--ghost btn--icon sidebar__close-btn" id="sidebar-close-btn" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main">
+      <a class="sidebar__link" href="dashboard.html">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2.5" y="2.5" width="6" height="6" rx="1.2" stroke="currentColor" stroke-width="1.6"/><rect x="11.5" y="2.5" width="6" height="6" rx="1.2" stroke="currentColor" stroke-width="1.6"/><rect x="2.5" y="11.5" width="6" height="6" rx="1.2" stroke="currentColor" stroke-width="1.6"/><rect x="11.5" y="11.5" width="6" height="6" rx="1.2" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="sidebar__link-label">Dashboard</span>
+      </a>
+      <a class="sidebar__link" href="jobs.html">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 6.5L10 3l7 3.5M3 6.5v7L10 17l7-3.5v-7M3 6.5L10 10m0 0l7-3.5M10 10v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="sidebar__link-label">Jobs</span>
+      </a>
+      <a class="sidebar__link" href="crews.html">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="7" cy="6.5" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 16c0-2.8 2-4.5 4.5-4.5s4.5 1.7 4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="14.5" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M12.8 11.8c.5-.2 1.1-.3 1.7-.3 2.2 0 3.8 1.4 3.8 3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="sidebar__link-label">Crews</span>
+      </a>
+      <a class="sidebar__link" href="customers.html" aria-current="page">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 17c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="sidebar__link-label">Customers</span>
+      </a>
+      <a class="sidebar__link" href="settings.html">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 2.5v2M10 15.5v2M17.5 10h-2M4.5 10h-2M15.3 4.7l-1.4 1.4M6.1 13.9l-1.4 1.4M15.3 15.3l-1.4-1.4M6.1 6.1L4.7 4.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span class="sidebar__link-label">Settings</span>
+      </a>
+    </nav>
+  </aside>
+
+  <div class="app-shell__main">
+    <header class="topbar">
+      <div class="topbar__crumb">
+        <button class="btn btn--ghost btn--icon topbar__menu-btn" id="menu-btn" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <span class="text-h2">Customers</span>
+      </div>
+      <div class="topbar__account">
+        <div class="avatar avatar--sm avatar--brand">JT</div>
+        <span><strong>Jordan T.</strong> &middot; Operations</span>
+      </div>
+    </header>
+
+    <main class="owner-main">
+      <div class="owner-main__inner">
+
+        <div class="page-header">
+          <div>
+            <h1 class="text-h1 page-header__title">Customers</h1>
+            <p class="text-body text-muted page-header__subtitle">Everyone who's booked a move with next2next.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-header">
+            <div class="input-group input-group--search">
+              <span class="input-group__icon">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l-3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <input class="input" id="customers-search" type="text" placeholder="Search customers">
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table" id="customers-table">
+              <thead>
+                <tr>
+                  <th>Customer</th>
+                  <th>Contact</th>
+                  <th data-align="right">Jobs</th>
+                  <th>Last job</th>
+                  <th data-align="right">Status</th>
+                </tr>
+              </thead>
+              <tbody id="customers-body">
+                <tr data-name="Marcus Webb">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">MW</div><span class="job-cell__name">Marcus Webb</span></div></td>
+                  <td data-label="Contact">marcus.webb@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Today</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--active">Active</span></td>
+                </tr>
+                <tr data-name="Priya Anand">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">PA</div><span class="job-cell__name">Priya Anand</span></div></td>
+                  <td data-label="Contact">priya.anand@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">2</td>
+                  <td data-label="Last job" class="tabular-nums">Aug 2</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--good">Completed</span></td>
+                </tr>
+                <tr data-name="Leon Ostrowski">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">LO</div><span class="job-cell__name">Leon Ostrowski</span></div></td>
+                  <td data-label="Contact">leon.ostrowski@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Aug 2</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--good">Completed</span></td>
+                </tr>
+                <tr data-name="Dana Whitfield">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">DW</div><span class="job-cell__name">Dana Whitfield</span></div></td>
+                  <td data-label="Contact">dana.whitfield@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">3</td>
+                  <td data-label="Last job" class="tabular-nums">Aug 1</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--good">Completed</span></td>
+                </tr>
+                <tr data-name="Callum Reyes">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">CR</div><span class="job-cell__name">Callum Reyes</span></div></td>
+                  <td data-label="Contact">callum.reyes@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Aug 4</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--neutral">Upcoming</span></td>
+                </tr>
+                <tr data-name="Sofia Marchetti">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">SM</div><span class="job-cell__name">Sofia Marchetti</span></div></td>
+                  <td data-label="Contact">sofia.marchetti@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Aug 5</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--neutral">Upcoming</span></td>
+                </tr>
+                <tr data-name="Andre Kowalski">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">AK</div><span class="job-cell__name">Andre Kowalski</span></div></td>
+                  <td data-label="Contact">andre.kowalski@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Jul 30</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--good">Completed</span></td>
+                </tr>
+                <tr data-name="Renata Silva">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">RS</div><span class="job-cell__name">Renata Silva</span></div></td>
+                  <td data-label="Contact">renata.silva@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Jul 29</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--good">Completed</span></td>
+                </tr>
+                <tr data-name="Tobias Lindqvist">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">TL</div><span class="job-cell__name">Tobias Lindqvist</span></div></td>
+                  <td data-label="Contact">tobias.lindqvist@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Jul 28</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--critical">Cancelled</span></td>
+                </tr>
+                <tr data-name="Naomi Achebe">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">NA</div><span class="job-cell__name">Naomi Achebe</span></div></td>
+                  <td data-label="Contact">naomi.achebe@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Aug 6</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--neutral">Upcoming</span></td>
+                </tr>
+                <tr data-name="Felix Duarte">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">FD</div><span class="job-cell__name">Felix Duarte</span></div></td>
+                  <td data-label="Contact">felix.duarte@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Jul 27</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--good">Completed</span></td>
+                </tr>
+                <tr data-name="Grace Kim">
+                  <td class="job-cell-td" data-label="Customer"><div class="job-cell"><div class="avatar avatar--sm">GK</div><span class="job-cell__name">Grace Kim</span></div></td>
+                  <td data-label="Contact">grace.kim@mailbox.example</td>
+                  <td data-label="Jobs" data-align="right" class="tabular-nums">1</td>
+                  <td data-label="Last job" class="tabular-nums">Aug 6</td>
+                  <td data-label="Status" data-align="right"><span class="status-tag status-tag--neutral">Upcoming</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="empty-state hidden" id="customers-empty">
+              <div class="empty-state__icon">
+                <svg width="22" height="22" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M17 17l-4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div class="empty-state__title" id="customers-empty-title">No customers match your search</div>
+              <button class="btn btn--ghost" id="customers-clear-search">Clear search</button>
+            </div>
+          </div>
+
+          <div class="table-footer text-small" id="customers-footer">Showing 12 of 12 customers</div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

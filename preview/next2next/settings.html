@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Track your move — next2next</title>
+<title>Settings — next2next</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
   <span class="meta-nav__label">Preview</span>
   <a href="index.html">Landing</a>
   <span class="meta-nav__sep">/</span>
-  <a href="tracking.html" aria-current="page">Tracking</a>
+  <a href="tracking.html">Tracking</a>
   <span class="meta-nav__sep">/</span>
   <a href="estimate.html">Estimate</a>
   <span class="meta-nav__sep">/</span>
@@ -22,7 +22,7 @@
 
 <div class="preview-notice">
   <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v4.5M10 6.8v.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-  Preview build &mdash; sample data for demonstration only, not connected to a live system.
+  Preview build &mdash; sample data for demonstration only, not connected to a live system. Nothing on this page is actually saved.
 </div>
 
 <div class="app-shell" id="app-shell">
@@ -53,7 +53,7 @@
         <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 17c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span class="sidebar__link-label">Customers</span>
       </a>
-      <a class="sidebar__link" href="settings.html">
+      <a class="sidebar__link" href="settings.html" aria-current="page">
         <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 2.5v2M10 15.5v2M17.5 10h-2M4.5 10h-2M15.3 4.7l-1.4 1.4M6.1 13.9l-1.4 1.4M15.3 15.3l-1.4-1.4M6.1 6.1L4.7 4.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span class="sidebar__link-label">Settings</span>
       </a>
@@ -66,85 +66,97 @@
         <button class="btn btn--ghost btn--icon topbar__menu-btn" id="menu-btn" aria-label="Open menu">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </button>
-        <span class="text-h2">Move tracking</span>
+        <span class="text-h2">Settings</span>
       </div>
       <div class="topbar__account">
-        <div class="avatar avatar--sm">MW</div>
-        <span><strong>Marcus Webb</strong></span>
+        <div class="avatar avatar--sm avatar--brand">JT</div>
+        <span><strong>Jordan T.</strong> &middot; Operations</span>
       </div>
     </header>
 
     <main class="owner-main">
-      <div class="customer-shell">
-        <div class="customer-main">
-          <div class="route-summary">
-            <span class="route-summary__point">214 Aldridge Ln</span>
-            <span class="route-summary__arrow">&rarr;</span>
-            <span class="route-summary__point">88 Ridgeview Cir</span>
-          </div>
+      <div class="owner-main__inner owner-main__inner--narrow">
 
-          <div class="eta-card">
-            <div class="text-caption eta-card__label">Estimated arrival</div>
-            <div class="eta-card__value">Today, 4:30 PM</div>
-            <div class="eta-card__crew">
-              <span class="pill pill--live">&#9679; Live</span>
-              Crew 3 &middot; Diego R. &amp; Sam T.
+        <div class="page-header">
+          <div>
+            <h1 class="text-h1 page-header__title">Settings</h1>
+            <p class="text-body text-muted page-header__subtitle">Company profile, notifications, and crew defaults.</p>
+          </div>
+        </div>
+
+        <div class="settings-stack">
+
+          <div class="card">
+            <div class="text-h2 estimate-section-title">Company profile</div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="f-business-name">Business name</label>
+                <input class="input input--plain" id="f-business-name" type="text" value="next2next Moving Co.">
+              </div>
+              <div class="field">
+                <label for="f-service-area">Service area</label>
+                <input class="input input--plain" id="f-service-area" type="text" value="Springfield metro &amp; surrounding">
+              </div>
+              <div class="field">
+                <label for="f-support-phone">Support phone</label>
+                <input class="input input--plain" id="f-support-phone" type="text" value="(555) 014-2938">
+              </div>
+              <div class="field">
+                <label for="f-support-email">Support email</label>
+                <input class="input input--plain" id="f-support-email" type="text" value="hello@next2next.example">
+              </div>
             </div>
           </div>
 
           <div class="card">
-            <ol class="checkpoints">
-              <li class="checkpoint checkpoint--done">
-                <div class="checkpoint__rail">
-                  <div class="checkpoint__dot"></div>
-                  <div class="checkpoint__line"></div>
-                </div>
-                <div class="checkpoint__body">
-                  <div class="checkpoint__title">Confirmed</div>
-                  <div class="checkpoint__time tabular-nums">Mon, Aug 3 &middot; 8:02 AM</div>
-                </div>
-              </li>
-              <li class="checkpoint checkpoint--done">
-                <div class="checkpoint__rail">
-                  <div class="checkpoint__dot"></div>
-                  <div class="checkpoint__line"></div>
-                </div>
-                <div class="checkpoint__body">
-                  <div class="checkpoint__title">En route</div>
-                  <div class="checkpoint__time tabular-nums">Mon, Aug 3 &middot; 9:15 AM</div>
-                </div>
-              </li>
-              <li class="checkpoint checkpoint--done">
-                <div class="checkpoint__rail">
-                  <div class="checkpoint__dot"></div>
-                  <div class="checkpoint__line"></div>
-                </div>
-                <div class="checkpoint__body">
-                  <div class="checkpoint__title">Loading</div>
-                  <div class="checkpoint__time tabular-nums">Mon, Aug 3 &middot; 9:48 AM</div>
-                </div>
-              </li>
-              <li class="checkpoint checkpoint--current">
-                <div class="checkpoint__rail">
-                  <div class="checkpoint__dot"></div>
-                  <div class="checkpoint__line"></div>
-                </div>
-                <div class="checkpoint__body">
-                  <div class="checkpoint__title">In transit <span class="status-tag status-tag--active">In progress</span></div>
-                  <div class="checkpoint__time">Crossing Millbrook Bridge</div>
-                </div>
-              </li>
-              <li class="checkpoint">
-                <div class="checkpoint__rail">
-                  <div class="checkpoint__dot"></div>
-                </div>
-                <div class="checkpoint__body">
-                  <div class="checkpoint__title">Delivered</div>
-                  <div class="checkpoint__time">Expected by 4:30 PM</div>
-                </div>
-              </li>
-            </ol>
+            <div class="text-h2 estimate-section-title">Notifications</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row__label">Email me when a job status changes</div>
+                <div class="settings-row__desc">Confirmed, en route, loading, delivered.</div>
+              </div>
+              <label class="switch"><input type="checkbox" checked><span class="switch__track"></span></label>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row__label">Text alerts for crew delays</div>
+                <div class="settings-row__desc">Sent to the operations line, not customers.</div>
+              </div>
+              <label class="switch"><input type="checkbox" checked><span class="switch__track"></span></label>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row__label">Weekly performance summary</div>
+                <div class="settings-row__desc">On-time rate, job volume, and crew utilization.</div>
+              </div>
+              <label class="switch"><input type="checkbox"><span class="switch__track"></span></label>
+            </div>
           </div>
+
+          <div class="card">
+            <div class="text-h2 estimate-section-title">Crew defaults</div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="f-crew-size">Default crew size</label>
+                <select class="select" id="f-crew-size">
+                  <option>2 movers</option>
+                  <option selected>3 movers</option>
+                  <option>4 movers</option>
+                  <option>5 movers</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-rate">Rate per mover / hour</label>
+                <input class="input input--plain" id="f-rate" type="text" value="$38">
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-actions">
+            <button class="btn btn--primary" id="settings-save">Save changes</button>
+            <span class="settings-saved" id="settings-saved">Saved</span>
+          </div>
+
         </div>
       </div>
     </main>
