@@ -359,6 +359,11 @@ input:focus-visible,
 .sidebar {
   width: var(--sidebar-w);
   flex-shrink: 0;
+  align-self: flex-start;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
   background: var(--maroon-900);
   color: var(--cream-100);
   display: flex;
